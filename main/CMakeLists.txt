@@ -95,6 +95,7 @@ set(COMPONENT_ADD_INCLUDEDIRS
 "hwconf/vesc"
 "hwconf/vesc/vbms32"
 "hwconf/vesc/vdisp_dual"
+"hwconf/tlord"
 
 "lispBM"
 "lispBM/include"

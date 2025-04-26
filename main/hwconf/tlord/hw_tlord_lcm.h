@@ -23,8 +23,16 @@
 #include "driver/gpio.h"
 
 #define HW_NAME						"Twilight Lord LCM"
+#define HW_DEFAULT_ID				55
+
 
 #define HW_INIT_HOOK()				hw_init()
+
+// Bluetooth Mode
+#define CONF_BLE_MODE 1
+
+// Name
+#define CONF_BLE_NAME "TL LCM"
 
 // NO LEDs
 #define LED_RED_ON()

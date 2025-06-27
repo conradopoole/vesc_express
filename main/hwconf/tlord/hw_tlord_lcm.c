@@ -20,5 +20,18 @@
 #include "hw_tlord_lcm.h"
 
 void hw_init(void) {
-	   
+
+    gpio_config_t gpconf = {0};
+
+	gpio_set_level(LED1, 0);
+    gpio_set_level(LED2, 0);
+    gpio_set_level(LED3, 0);
+    gpio_set_level(LED4, 0);
+
+    gpconf.pin_bit_mask = BIT(LED1) | BIT(LED2) | BIT(LED3)
+		| BIT(LED4);
+	gpconf.mode         = GPIO_MODE_OUTPUT;
+	gpconf.pull_down_en = GPIO_PULLDOWN_DISABLE;
+	gpconf.pull_up_en   = GPIO_PULLUP_DISABLE;
+	gpio_config(&gpconf);
 }

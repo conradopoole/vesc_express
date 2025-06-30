@@ -1391,7 +1391,10 @@ void hw_init(void) {
 	// gpio_set_level(PIN_PCHG_EN, 0);
 	gpio_set_level(PIN_SHUTDOWN, 1);
 	// END
-	gpio_set_level(PIN_PSW_EN, 0);
+	// CHANGE FROM VBMS32
+	// gpio_set_level(PIN_PSW_EN, 0);
+	gpio_set_level(PIN_PSW_EN, 1);
+	// END
 	gpio_set_level(PIN_COM_EN, 1);
 
 	// CHANGE FROM VBMS32
@@ -1413,12 +1416,12 @@ void hw_init(void) {
 	gpio_set_direction(PIN_SHUTDOWN, GPIO_MODE_OUTPUT_OD);
 	gpio_set_pull_mode(PIN_SHUTDOWN, GPIO_FLOATING);
 
-	// PIN_PSW_EN we want it OUTPUT OD
+	// PIN_PSW_EN we want it OUTPUT 
 	gpio_set_intr_type(PIN_PSW_EN, GPIO_INTR_DISABLE);
-	gpio_set_direction(PIN_PSW_EN, GPIO_MODE_OUTPUT_OD);
-	gpio_set_pull_mode(PIN_PSW_EN, GPIO_PULLDOWN_ONLY);
-	gpio_deep_sleep_hold_en();
-	gpio_hold_en(PIN_PSW_EN);
+	gpio_set_direction(PIN_PSW_EN, GPIO_MODE_OUTPUT);
+	gpio_set_pull_mode(PIN_PSW_EN, GPIO_FLOATING);
+	// gpio_deep_sleep_hold_en();
+	// gpio_hold_en(PIN_PSW_EN);
 	//
 	// END
 
@@ -1428,7 +1431,10 @@ void hw_init(void) {
 	// gpio_set_level(PIN_PCHG_EN, 0);
 	gpio_set_level(PIN_SHUTDOWN, 1);
 	// END
-	gpio_set_level(PIN_PSW_EN, 0);
+	// CHANGE FROM VBMS32
+	// gpio_set_level(PIN_PSW_EN, 0);
+	gpio_set_level(PIN_PSW_EN, 1);
+	// END
 	gpio_set_level(PIN_COM_EN, 1);
 
 	gpconf.pin_bit_mask = BIT(PIN_ENABLE);

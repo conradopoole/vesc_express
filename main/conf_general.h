@@ -68,8 +68,10 @@
 //#define HW_HEADER					"hw_lb_chg.h"
 //#define HW_SOURCE					"hw_lb_chg.c"
 
-#define HW_HEADER					"hw_tlord_lcm.h"
-#define HW_SOURCE					"hw_tlord_lcm.c"
+// #define HW_HEADER					"hw_tlord_lcm.h"
+// #define HW_SOURCE					"hw_tlord_lcm.c"
+#define HW_HEADER					"hw_tlord_gtv_lcm.h"
+#define HW_SOURCE					"hw_tlord_gtv_lcm.c"
 #endif
 
 #if !defined(HW_SOURCE) && !defined(HW_SOURCE_ALT)

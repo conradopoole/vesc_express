@@ -37,3 +37,13 @@ if(DEFINED ENV{USER_GIT_BRANCH_NAME})
 endif()
 
 idf_build_set_property(COMPILE_OPTIONS "-fdiagnostics-color=always" APPEND)
+
+
+add_custom_target(rename_bin ALL
+    COMMAND ${CMAKE_COMMAND} -E echo "Running post_build script..."
+    COMMAND ${CMAKE_COMMAND} -E env python ${CMAKE_SOURCE_DIR}/post_build.py
+        ${CMAKE_BINARY_DIR} ${PROJECT_NAME}
+    DEPENDS ${PROJECT_NAME}.elf
+    COMMENT "Renaming firmware binary after full build"
+    VERBATIM
+)

@@ -100,6 +100,8 @@ set(COMPONENT_ADD_INCLUDEDIRS
 "hwconf/trampa/bms_rb"
 "hwconf/vesc"
 "hwconf/vesc/vbms32"
+"hwconf/jetfleet"
+"hwconf/jetfleet/vbms32"
 "hwconf/vesc/vdisp_dual"
 "hwconf/vesc/scope"
 "hwconf/vesc/duet"

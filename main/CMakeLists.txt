@@ -101,7 +101,7 @@ set(COMPONENT_ADD_INCLUDEDIRS
 "hwconf/vesc"
 "hwconf/vesc/vbms32"
 "hwconf/jetfleet"
-"hwconf/jetfleet/vbms32"
+"hwconf/jetfleet/bms32"
 "hwconf/vesc/vdisp_dual"
 "hwconf/vesc/scope"
 "hwconf/vesc/duet"

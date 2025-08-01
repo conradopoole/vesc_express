@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     */
 
-#include "hw_jf_vbms32.h"
+#include "hw_jf_bms32.h"
 #include "../../vesc/vbms32/bq769x2_defs.h"
 
 #include "main.h"

@@ -17,8 +17,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     */
 
-#ifndef MAIN_HWCONF_VESC_VBMS32_H_
-#define MAIN_HWCONF_VESC_VBMS32_H_
+#ifndef MAIN_HWCONF_JF_BMS32_H_
+#define MAIN_HWCONF_JF_BMS32_H_
 
 /*
  * TODO V1:
@@ -41,7 +41,7 @@
 #include "driver/gpio.h"
 #include "datatypes.h"
 
-#define HW_NAME						"JFVBMS32"
+#define HW_NAME						"JFBMS32"
 
 #define PCB_VERSION					2
 
@@ -51,14 +51,14 @@
 //#define HW_POST_LISPIF_HOOK()		vTaskDelay(200);
 
 // Configuration overrides
-#define OVR_CONF_PARSER_C			"jf_vbms32_confparser.c"
-#define OVR_CONF_PARSER_H			"jf_vbms32_confparser.h"
-#define OVR_CONF_XML_C				"jf_vbms32_confxml.c"
-#define OVR_CONF_XML_H				"jf_vbms32_confxml.h"
-#define OVR_CONF_DEFAULT			"jf_vbms32_conf_default.h"
-#define OVR_CONF_SERIALIZE			jf_vbms32_confparser_serialize_main_config_t
-#define OVR_CONF_DESERIALIZE		jf_vbms32_confparser_deserialize_main_config_t
-#define OVR_CONF_SET_DEFAULTS		jf_vbms32_confparser_set_defaults_main_config_t
+#define OVR_CONF_PARSER_C			"jf_bms32_confparser.c"
+#define OVR_CONF_PARSER_H			"jf_bms32_confparser.h"
+#define OVR_CONF_XML_C				"jf_bms32_confxml.c"
+#define OVR_CONF_XML_H				"jf_bms32_confxml.h"
+#define OVR_CONF_DEFAULT			"jf_bms32_conf_default.h"
+#define OVR_CONF_SERIALIZE			jf_bms32_confparser_serialize_main_config_t
+#define OVR_CONF_DESERIALIZE		jf_bms32_confparser_deserialize_main_config_t
+#define OVR_CONF_SET_DEFAULTS		jf_bms32_confparser_set_defaults_main_config_t
 #define OVR_CONF_MAIN_CONFIG
 #define VAR_INIT_CODE				259763459
 
@@ -223,4 +223,4 @@ typedef struct {
 // Functions
 void hw_init(void);
 
-#endif /* MAIN_HWCONF_VESC_VBMS32_H_ */
+#endif /* MAIN_HWCONF_JF_BMS32_H_ */
